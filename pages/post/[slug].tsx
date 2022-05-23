@@ -3,7 +3,7 @@ import markdownToHtml from "../../lib/markdownToHtml";
 import { getAllPosts, getPostBySlug, PostType } from "../../lib/postApi";
 import { Bottom } from "../../components/common/Bottom/Bottom";
 import { Header } from "../../components/common/Header/Header";
-import { Section } from "../../components/post/Section/Section";
+import { PostLayout } from "../../layouts/blogDetail";
 
 type PostsProps = {
     post: PostType;
@@ -14,7 +14,7 @@ const Posts: React.FC<PostsProps> = ({ post }) => {
     return (
         <>
             <Header />
-            <Section post={post}/>
+            <PostLayout post={post}/>
             <Bottom />
         </>
     );

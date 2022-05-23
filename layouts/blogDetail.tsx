@@ -10,8 +10,8 @@ import {
   PostDate,
   AuthorLinks,
   AuthorLink,
-} from "./Section.style";
-import GiscusBox from "../../giscus/giscus";
+} from "../components/post/Section/Section.style";
+import GiscusBox from "../components/giscus/giscus";
 type PostType = {
   slug: string;
   title: string;
@@ -29,7 +29,7 @@ type PostsProps = {
   post: PostType;
 };
 
-export const Section = ({ post }: PostsProps) => {
+export const PostLayout = ({ post }: PostsProps) => {
   return (
     <SectionContainer>
       <SectionWrap>
